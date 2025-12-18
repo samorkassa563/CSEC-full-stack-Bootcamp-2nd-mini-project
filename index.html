@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eyob Kassa - Personal Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     
+</head>
+<body class="theme-black-yellow">
+    <!-- Welcome Popup - Now closes when ANYWHERE on screen is clicked -->
+    <div class="welcome-popup active" id="welcomePopup">
+        <div class="welcome-content">
+            <i class="fas fa-user-circle welcome-icon"></i>
+            <h2 class="welcome-title">Welcome to My Portfolio</h2>
+            <p class="welcome-text">Hello! I'm Eyob Kassa, a passionate software developer and designer. This interactive profile showcases my skills, experience, and projects.</p>
+            <p class="welcome-thanks">Thank you for visiting my portfolio!</p>
+            <button class="welcome-btn" id="enterSite">
+                <i class="fas fa-arrow-right"></i> Explore Portfolio
+            </button>
+            <p class="welcome-instruction">(Click anywhere to close)</p>
+        </div>
+    </div>
+    
+    <!-- Theme Change Toast Notification -->
+    <div class="theme-toast" id="themeToast">
+        <i class="fas fa-palette"></i>
+        <div class="theme-toast-content">
+            <div class="theme-toast-title">Theme Changed</div>
+            <div class="theme-toast-message" id="toastMessage">Black-Yellow theme activated</div>
+        </div>
+    </div>
+
+    <!-- Fixed Header with Theme Controls -->
+    <nav class="fixed-header">
+        <div class="logo">
+            <h3 style="color: var(--primary-color); font-weight: 700;">Eyob K.</h3>
+        </div>
+        <div class="theme-controls">
+            <button class="theme-btn" id="themeToggle" title="Random Theme">
+                <i class="fas fa-random"></i>
+            </button>
+            <button class="hamburger-menu" id="menuToggle" title="Menu & Themes">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Settings Panel (Theme Selection) -->
+    <div class="settings-panel" id="settingsPanel">
+        <h3 class="settings-title">Choose Your Theme</h3>
+        <div class="theme-grid">
+            <div class="theme-option active" data-theme="theme-black-yellow">
+                <div class="theme-color-preview" style="background: linear-gradient(135deg, #000000 50%, #ffc107 50%);"></div>
+                <span class="theme-name">Black-Yellow</span>
+            </div>
+            <div class="theme-option" data-theme="theme-dark">
+                <div class="theme-color-preview" style="background: linear-gradient(135deg, #121212 50%, #8a4fff 50%);"></div>
+                <span class="theme-name">Dark Mode</span>
+            </div>
+            <div class="theme-option" data-theme="theme-light">
+                <div class="theme-color-preview" style="background: linear-gradient(135deg, #f8f9fa 50%, #4a6fa5 50%);"></div>
+                <span class="theme-name">Light</span>
+            </div>
+            <div class="theme-option" data-theme="theme-purple">
+                <div class="theme-color-preview" style="background: linear-gradient(135deg, #f3e5f5 50%, #9c27b0 50%);"></div>
+                <span class="theme-name">Purple</span>
+            </div>
+            <div class="theme-option" data-theme="theme-black-green">
+                <div class="theme-color-preview" style="background: linear-gradient(135deg, #0a0a0a 50%, #4caf50 50%);"></div>
+                <span class="theme-name">Black-Green</span>
+            </div>
+            <div class="theme-option" data-theme="theme-fade-blue">
+                <div class="theme-color-preview" style="background: linear-gradient(135deg, #e3f2fd 50%, #2196f3 50%);"></div>
+                <span class="theme-name">Fade Blue</span>
+            </div>
+            <div class="theme-option" data-theme="theme-fade-red">
+                <div class="theme-color-preview" style="background: linear-gradient(135deg, #ffebee 50%, #f44336 50%);"></div>
+                <span class="theme-name">Fade Red</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header>
+        <div class="container">
+            <h1>Eyob Kassa</h1>
+            <p class="title">Software Engineering Student & Full Stack Developer</p>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="yob.jpg" alt="Eyob Kassa Profile Picture">
+                </div>
+                <div class="profile-bio">
+                    <h2>About Me</h2>
+                     <p>Hello! My name is Eyob Kassa. I'm a 19-year-old first-year student at Adama Science and Technology University, passionate about becoming a full-stack developer with a special focus on mastering backend technologies.</p>
+                    <p>My journey in technology began with a curiosity about how websites and applications work behind the scenes. Now, I'm dedicated to learning both frontend and backend development to build complete, functional applications.</p>
+                    <p>I believe that mastering backend development is crucial for creating robust, scalable applications. Currently, I'm focusing on learning server-side technologies, databases, APIs, and system architecture while also honing my frontend skills.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section with Percentage Animation -->
+    <section class="skills-section" id="skills-section">
+        <div class="container">
+            <h2 class="section-title">My Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-progress">
+                        <div class="skill-progress-circle">
+                            <svg>
+                                <circle class="progress-bg" cx="70" cy="70" r="65"></circle>
+                                <circle class="progress-bar" cx="70" cy="70" r="65" data-percentage="90"></circle>
+                            </svg>
+                        </div>
+                        <div class="skill-progress-value">90%</div>
+                    </div>
+                    <i class="fab fa-html5 skill-icon"></i>
+                    <h3>Frontend Development</h3>
+                    <div class="skill-level">Expert Level</div>
+                    <p class="skill-description">Creating responsive, accessible, and performant user interfaces with modern web technologies. I have extensive experience building complex web applications with clean, maintainable code.</p>
+                    <div class="experience-percentage">
+                        <i class="fas fa-chart-line"></i> I have 90% experience in Frontend technologies
+                    </div>
+                    <div class="skill-languages">
+                        <span class="language-tag">HTML5</span>
+                        <span class="language-tag">CSS3</span>
+                        <span class="language-tag">JavaScript</span>
+                        <span class="language-tag">React.js</span>
+                        <span class="language-tag">TypeScript</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-progress">
+                        <div class="skill-progress-circle">
+                            <svg>
+                                <circle class="progress-bg" cx="70" cy="70" r="65"></circle>
+                                <circle class="progress-bar" cx="70" cy="70" r="65" data-percentage="78"></circle>
+                            </svg>
+                        </div>
+                        <div class="skill-progress-value">78%</div>
+                    </div>
+                    <i class="fas fa-server skill-icon"></i>
+                    <h3>Backend Development</h3>
+                    <div class="skill-level">Advanced Level</div>
+                    <p class="skill-description">Building scalable server-side applications, RESTful APIs, and database architectures. I can design efficient systems and implement secure authentication mechanisms.</p>
+                    <div class="experience-percentage">
+                        <i class="fas fa-chart-line"></i> I have 78% experience in Backend technologies
+                    </div>
+                    <div class="skill-languages">
+                        <span class="language-tag">Node.js</span>
+                        <span class="language-tag">Express.js</span>
+                        <span class="language-tag">Python</span>
+                        <span class="language-tag">Java</span>
+                        <span class="language-tag">PHP</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-progress">
+                        <div class="skill-progress-circle">
+                            <svg>
+                                <circle class="progress-bg" cx="70" cy="70" r="65"></circle>
+                                <circle class="progress-bar" cx="70" cy="70" r="65" data-percentage="69"></circle>
+                            </svg>
+                        </div>
+                        <div class="skill-progress-value">69%</div>
+                    </div>
+                    <i class="fas fa-mobile-alt skill-icon"></i>
+                    <h3>Mobile Development</h3>
+                    <div class="skill-level">Expert Level</div>
+                    <p class="skill-description">Developing cross-platform mobile applications with focus on performance and UX. I've published several apps to app stores with thousands of downloads.</p>
+                    <div class="experience-percentage">
+                        <i class="fas fa-chart69ine"></i> I have 69% experience in Mobile Development
+                    </div>
+                    <div class="skill-languages">
+                        <span class="language-tag">React Native</span>
+                        <span class="language-tag">Flutter</span>
+                        <span class="language-tag">Android</span>
+                        <span class="language-tag">iOS</span>
+                        <span class="language-tag">Kotlin</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-progress">
+                        <div class="skill-progress-circle">
+                            <svg>
+                                <circle class="progress-bg" cx="70" cy="70" r="65"></circle>
+                                <circle class="progress-bar" cx="70" cy="70" r="65" data-percentage="84"></circle>
+                            </svg>
+                        </div>
+                        <div class="skill-progress-value">84%</div>
+                    </div>
+                    <i class="fas fa-database skill-icon"></i>
+                    <h3>Database & DevOps</h3>
+                    <div class="skill-level">Advanced Level</div>
+                    <p class="skill-description">Designing database schemas, optimizing queries, and implementing CI/CD pipelines. I can set up full deployment pipelines and manage cloud infrastructure.</p>
+                    <div class="experience-percentage">
+                        <i class="fas fa-chart-line"></i> I have 84% experience in Database & DevOps
+                    </div>
+                    <div class="skill-languages">
+                        <span class="language-tag">MongoDB</span>
+                        <span class="language-tag">MySQL</span>
+                        <span class="language-tag">PostgreSQL</span>
+                        <span class="language-tag">Docker</span>
+                        <span class="language-tag">AWS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - Grid Layout like Skills -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Contact Information</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>Addis Ababa, Ethiopia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email Address</h4>
+                                <p>eyob.kassa@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone Number</h4>
+                                <p>+251 912 345 678</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Working Hours</h4>
+                                <p>Mon - Fri, 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>Send Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Enter message subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" placeholder="Type your message here..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        
+                        <!-- Success Message Container -->
+                        <div class="form-success" id="formSuccess">
+                            <i class="fas fa-check-circle success-icon"></i>
+                            <span id="successMessage">Thank you for your message! It has been submitted successfully.</span>
+                            <div id="submissionTime" style="font-size: 0.85rem; margin-top: 8px;"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-name">Eyob Kassa</h3>
+                <p class="copyright">© 2023 Personal Profile Page. All rights reserved.</p>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Display Property Examples (Hidden) -->
+    <div class="display-examples">
+        <div class="block-example">This is a block element</div>
+        <span class="inline-example">Inline element 1</span>
+        <span class="inline-example">Inline element 2</span>
+        <div class="inline-block-example">Inline-block element 1</div>
+        <div class="inline-block-example">Inline-block element 2</div>
+    </div>
+
+    <script src="script.js">
+       
+    </script>
+</body>
+</html>
