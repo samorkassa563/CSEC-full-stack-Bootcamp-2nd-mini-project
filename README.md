@@ -1,1 +1,1 @@
-# 2nd-CSEC-mini-project
+#CSEC-full-stack-bootcamp-mini-project
